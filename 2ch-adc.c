@@ -3,7 +3,7 @@
 // 
 // Copyright 2014 GPLv2 Mihaly Vadai vadaim@gmail.com
 
-#define F_CPU 8000000L //fuses have to be set: -U lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m
+#define F_CPU 8000000L //fuses have to be set: -U lfuse:w:0xe2:m -U hfuse:w:0xdd:m -U efuse:w:0xff:m
 #define DEVICE_ID 0x03
 #include <avr/io.h>
 #include <avr/interrupt.h>
