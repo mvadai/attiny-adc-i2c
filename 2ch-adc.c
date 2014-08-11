@@ -7,7 +7,6 @@
 #define DEVICE_ID 0x03
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include <avr/sleep.h>
 #include <util/delay.h>
 
 #include "usitwislave_devices.h"
