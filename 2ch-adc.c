@@ -53,10 +53,10 @@ void ADC_input(uint8_t pin){
 void ADC_enable(uint8_t def_pin){
 	ADCSRA |= (1 << ADPS2) | (1 << ADPS1) | (0 << ADPS0); // clock divided by 64 125 kHz
 	ADCSRA |= (1 << ADATE); // setting auto trigger
-	ADCSRB |= (0 << ADTS2) | (0 << ADTS1) | (0 << ADTS0); // free running mode - default
-	ADMUX |= (0 << REFS0); // ref voltage is Vcc - default
+//	ADCSRB |= (0 << ADTS2) | (0 << ADTS1) | (0 << ADTS0); // free running mode - default
+//	ADMUX |= (0 << REFS0); // ref voltage is Vcc - default
 	ADC_input(def_pin); // setting default pin
-	ADMUX |= (0 << ADLAR); // using 10 bit resolution - default
+//	ADMUX |= (0 << ADLAR); // using 10 bit resolution - default
 	ADCSRA |= (1 << ADEN); // enable ADC
 
 //	ADCSRA |= (1 << ADIE);  // Enable ADC Interrupt 
@@ -110,5 +110,4 @@ int main(void) {
 	ADC_enable(2);
 	blink300(DEVICE_ID); // just to let you know my device ID
 	usi_twi_slave(DEVICE_ID, 1, *twi_callback, 0);
-	return 0;
 }
