@@ -48,7 +48,7 @@ void ADC_input(uint8_t pin){
 	ADMUX |= (1 << MUX1);
 	if(pin == 3) ADMUX &= ~(1 << MUX0); // adc set to pb4
 	if(pin == 2) ADMUX |= (1 << MUX0); // adc set to pb3
-	_delay_us(120); // wait for 15 ADC cycles at 125kHz
+	_delay_us(200); // wait for 25 ADC cycles at 125kHz
 }
 void ADC_enable(uint8_t def_pin){
 	ADCSRA |= (1 << ADPS2) | (1 << ADPS1) | (0 << ADPS0); // clock divided by 64 125 kHz
